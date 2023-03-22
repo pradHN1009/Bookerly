@@ -1,0 +1,150 @@
+/*############## Default ###############*/
+nav,
+header,
+footer{
+    display:block;
+}
+body{
+    line-height: 1;
+    margin:0;
+}
+.container{
+    width:100%;
+    margin:auto;
+    padding-top:5%;
+    padding-bottom: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+/*################## Nav Bar ##############*/
+
+nav{
+    width:100%;
+    margin:0;
+}
+nav ul{
+    overflow: hidden;
+    background-color: azure;
+    margin:0;
+    padding:0;
+    height:auto;
+}
+ul.topnav li {
+    list-style: none;
+    float: left;
+}
+ul.topnav li.topnav-right{
+    list-style: none;
+    float:right;
+}
+
+ul.topnav li img{
+    display:block;
+}
+ul.topnav li a{
+    font-family:'Lobster';
+    text-decoration: none;
+    font-size:35px;
+    padding:14px;
+    margin-top:3px;
+    display:block;
+    color:coral;
+}
+ul.topnav li a.option{
+    font-family:'Roboto';
+    border-radius: 10%;
+    display: block;
+    text-transform: uppercase;
+    padding:14px;
+    text-decoration: none;
+    font-size:16px;
+    min-height: 16px;
+    color:black;
+    margin-top:12px;
+}
+ul.topnav li a.option:hover{
+    background-color:coral;
+    color:#fff;
+}
+ul.topnav li a.optionMobile:hover{
+    background-color:coral;
+    color:#fff;
+}
+ul.topnav li.dropDownIcon{
+    display:none;
+}
+
+/*###################Style##########################*/
+
+#section-1-gradient{
+    background-image:coral;
+    background-image: linear-gradient(to bottom,azure,
+    aqua);
+}
+.box1{
+    grid-column : 1/2;
+    grid-row: 1/2;
+}
+.box2{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+h1.large{
+    color:coral;
+    font-size:40px;
+    font-family: 'Roboto';
+    font-weight: 1200;
+    margin:0;
+}
+h2.large{
+    font-family: 'Roboto';
+    color:coral;
+}
+.left-side{
+    margin-left:30%;
+}
+input[type="text"],input[type="password"]{
+    padding:5px;
+}
+
+/*################# Mobile #######################*/
+
+@media screen and (max-width : 850px){
+    
+    ul.topnav li:not(:nth-child(7),:nth-child(8))
+    {
+        display:none;
+    }
+    ul.topnav li.dropDownIcon{
+        display:block;
+        list-style:none;
+        float:right;
+    }
+    
+    ul.topnav.responsive li.dropDownIcon{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    ul.topnav.responsive {
+        position: relative;
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    ul.topnav.responsive li a.Title{
+        position:absolute;
+        top:0;
+        left:90px;
+    }
+    ul.topnav.responsive li{
+        display:inline;
+        float:none;
+    }
+    ul.topnav.responsive li a.option{
+        border-radius: 0;
+        display:block;
+        text-align: left;
+    }
+}
